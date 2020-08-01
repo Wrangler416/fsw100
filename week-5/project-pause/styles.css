@@ -20,6 +20,7 @@
     background-color: #EE2E84;
     grid-column: 2 / 3;
     /* grid-row: 2 / 3; */
+    height: 100px;
 }
 .box-4 {
     background-color: #EE2E84;
@@ -70,14 +71,5 @@
 {
     grid-column: 1 / -1; 
 } 
-
-.box-2,
-.box-3,
-.box-4,
-.box-5 {
-background-color: #EE2E84;
-}
-
-
 }
 
