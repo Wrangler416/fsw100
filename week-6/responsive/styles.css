@@ -1,28 +1,36 @@
  /* for mobile size screen */
  header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .nav {
-    grid-column: 1 / 2; 
-    padding: 10px; 
-    list-style-type: none;
-    background-color: #FFC65C;
-    font-family: 'Lexend Zetta', sans-serif;
-    color: teal; 
-    border-color: teal;
-    border: solid;
-    float: left;
+   display: grid; 
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
  }
- li {
+ nav {
+   display: grid; 
+   grid-template-columns: 1fr 1fr 1fr; 
+   grid-column: 1 / 2; 
+ }
+ #nav {  
+   display: grid; 
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-row: 1 / 2;
+   grid-column: 1 / 2; 
+   padding: 10px; 
+   background-color: #FFC65C;
    font-family: 'Lexend Zetta', sans-serif;
- }
-  footer {
+   color: teal; 
+   border-color: teal;
+   border: solid; 
+   list-style-type: none;
+   position: fixed;
+   height: 20px; 
+}
+footer {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
     text-align: center;
-  }
- .logo {
+}
+.logo {
    display: flex; 
    flex-direction: row;
    justify-content: center;
@@ -31,12 +39,12 @@
    margin: auto; 
    padding-top: 20px;
  }
- h1 {
+h1 {
    font-family:'Lexend Zetta', sans-serif;
    text-align: center;
    color: teal; 
    margin: 10px;
-   padding-bottom: 1em;
+   padding-bottom: 10pt;
  }
  .movie {
    padding: 10px; 
@@ -145,8 +153,19 @@
    font-size: 15pt; 
  }
   /* for tablet size screen */
- @media (min-width: 500px) {
- .movie {
+ @media only screen and (min-width: 600px) {
+#nav { 
+    display: grid; 
+    background-color: #FFC65C;
+    font-family: 'Lexend Zetta', sans-serif;
+    color: teal; 
+    border-color: teal;
+    border: solid; 
+    list-style-type: none;
+    width: 100%;
+    height: 20px; 
+ }
+.movie {
    width: 700px;
    height: 400px; 
    display: flex;
@@ -154,23 +173,6 @@
    justify-content: center;
    margin: auto;
  }
- .nav {
-   grid-column: 1 / 4; 
-   position: fixed;
-   width: 100%;
-   top: 0; 
-   padding: 10px;
-   list-style-type: none;
-   background-color: #FFC65C;
-   font-family: 'Lexend Zetta', sans-serif;
-   color: teal; 
-   border-color: teal;
-   border: solid;
- }
- /* main {
-   display: grid; 
-   grid-gap: 10px; 
- } */
  h1 {
   font-family:'Lexend Zetta', sans-serif;
   text-align: center;
@@ -208,19 +210,21 @@
  }
  .moreinfo {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr; 
+   grid-template-columns: 1fr 1fr; 
+   margin: 10px; 
  }
  .included {
    grid-column: 1 / 2;
    font-family: 'Lexend Zetta', sans-serif;
    color: teal;
    text-align: center;
+   margin: 10px; 
 }
  .fullday {
    grid-column: 2 / 3;
 }
-.sunset {
-   grid-column: 3 / 4; 
+.moon {
+  grid-column: 1 / -1;
 }
  .table {
    display: grid;
@@ -235,7 +239,7 @@ footer {
 }
 }
  /* for desktop size screen */
- @media (min-width: 1100px) {
+ @media only screen and (min-width: 1100px) {
 main {
   display: grid; 
 }
@@ -256,10 +260,25 @@ h1 {
  a:hover {
    color: teal;
 }
+.moreinfo {
+  display: grid; 
+  grid-template-columns: auto auto auto;
+}
  .included {
   grid-column: 1 / 2;
   font-family: 'Lexend Zetta', sans-serif;
   color: teal;
   text-align: center;
+}
+.fullday {
+  grid-column: 2 / 3; 
+}
+.moon {
+  grid-column: 3 / 4; 
+}
+.container {
+  display: grid; 
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px; 
 }
 }
