@@ -1,20 +1,13 @@
  /* for mobile size screen */
- header {
-   display: grid; 
-   grid-template-rows: 1fr;
-   grid-template-columns: 1fr 1fr 1fr;
- }
  nav {
    display: grid; 
    grid-template-columns: 1fr 1fr 1fr; 
    grid-column: 1 / 2; 
  }
- #nav {  
-   display: grid; 
-   grid-template-rows: 1fr;
-   grid-template-columns: 1fr 1fr 1fr;
+ nav ul {  
    grid-row: 1 / 2;
    grid-column: 1 / 2; 
+   grid-row: 1 / 3; 
    padding: 10px; 
    background-color: #FFC65C;
    font-family: 'Lexend Zetta', sans-serif;
@@ -154,16 +147,21 @@ h1 {
  }
   /* for tablet size screen */
  @media only screen and (min-width: 600px) {
-#nav { 
+nav { 
     display: grid; 
-    background-color: #FFC65C;
-    font-family: 'Lexend Zetta', sans-serif;
-    color: teal; 
-    border-color: teal;
-    border: solid; 
-    list-style-type: none;
-    width: 100%;
-    height: 20px; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+ }
+ nav ul {
+  grid-column: 1 / -1;
+  background-color: #FFC65C;
+  font-family: 'Lexend Zetta', sans-serif;
+  color: teal; 
+  border-color: teal;
+  border: solid; 
+  list-style-type: none;
+  width: 100%;
+  height: 20px;
  }
 .movie {
    width: 700px;
